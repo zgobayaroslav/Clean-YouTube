@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
+    /* Colors */
     --background-color: #FFFBFF;
     --surface-container-high-color: #F6E4E3;
-    --body-large-size: 16px;
+    --on-surface-color: #201A1A;
+    --on-surface-variant-color: #524342;
+
+    /* Search bar tokens */
     --search-bar-height: 56px;
     --search-bar-min-width: 360px;
     --search-bar-max-width: 720px;
-    --search-bar-border-radius: 28px;
     --search-bar-horizontal-margin: 24px;
+
+    /* Font (body large) */
+    --body-large-font-family: "Roboto";
+    --body-large-line-height: 24px;
+    --body-large-font-size: 16px;
+    --body-large-font-weight: 400;
+    --body-large-text-tracking: 0.5;
 }
 
 * {
@@ -47,7 +59,7 @@ body {
 .search-bar-container {
     display: flex;
     background-color: var(--surface-container-high-color);
-    border-radius: var(--search-bar-border-radius);
+    border-radius: calc(var(--search-bar-height) / 2);
     min-width: var(--search-bar-min-width);
     max-width: var(--search-bar-max-width);
     width: calc(100% - var(--search-bar-horizontal-margin) * 2);
@@ -74,6 +86,16 @@ body {
     margin-left: 16px;
     outline: none;
     flex-grow: 1;
+    color: var(--on-surface-color);
+    font-family: var(--body-large-font-family);
+    line-height: var(--body-large-line-height);
+    font-size: var(--body-large-font-size);
+    font-weight: var(--body-large-font-weight);
+    letter-spacing: var(--body-large-text-tracking);
+}
+
+.input-field::placeholder {
+    color: var(--on-surface-variant-color);
 }
 
 .icon-button {
