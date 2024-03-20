@@ -12,6 +12,7 @@
     --search-bar-min-width: 360px;
     --search-bar-max-width: 720px;
     --search-bar-horizontal-margin: 24px;
+    --search-bar-action-width: 56px;
 
     /* Font (body large) */
     --body-large-font-family: "Roboto";
@@ -100,9 +101,9 @@ body {
 
 .icon-button {
     background-color: transparent;
-    width: 56px;
-    height: 56px;
-    border-radius: 28px;
+    width: var(--search-bar-action-width);
+    height: var(--search-bar-height);
+    border-radius: calc(var(--search-bar-height) / 2);
     cursor: pointer;
     border: none;
 }
