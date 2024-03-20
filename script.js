@@ -6,5 +6,10 @@ function navigateToYouTubeIfEnter(event) {
 
 function navigateToYouTube() {
     let query = document.getElementById("queryInputField").value;
-    window.location.href = `https://www.youtube.com/results?search_query=${query}`;
+    if (query.toString().length == 0) {
+        // Navigate to rickroll
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    } else {
+        window.location.href = `https://www.youtube.com/results?search_query=${query}`;
+    }
 }
